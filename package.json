@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.12.5 <2.23.2"
+  },
+  "dependencies": {
+    "hoek": "^5.0.4"
   }
 }
