@@ -3,12 +3,21 @@
 <head>
 	<title>Photo Booth</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
+    <h1>PhotoBooth</h1>
 	<div class="photobooth" >
+        <div class="col-md-offset-3">
+        <button onclick="takePhoto()" class="btn btn-primary">Take Photo</button>
+        <button onclick="paintToCanvasRE()" name="RE" class="btn btn-primary" >RedEffect</button>
+        <button onclick="paintToCanvasRGBS()" name="RGBS" class="btn btn-primary" >RGBSplit</button>
+        <button onclick="paintToCanvas()" name="RGBS" class="btn btn-primary">Default</button>
+        </div>
+    <!--<div class="rgb">
 		<div class="controls">
-			<button onclick="takePhoto()" >Take Photo</button>
-	<div class="rgb">
         <label for="rmin">Red Min:</label>
         <input type="range" min=0 max=255 name="rmin">
         <label for="rmax">Red Max:</label>
@@ -27,14 +36,12 @@
         <input type="range" min=0 max=255 name="bmin">
         <label for="bmax">Blue Max:</label>
         <input type="range" min=0 max=255 name="bmax">
-     </div>
-     <button onclick="paintToCanvasRE()" name="RE"  >RedEffect</button>
-     <button onclick="paintToCanvasRGBS()" name="RGBS" >RGBSplit</button>
-     <button onclick="paintToCanvas()" name="RGBS" >Default</button>
+     </div>--> <!--Will use this for future green screen effect :) -->
  </div>
 </div>
-
+<div class="container frame">
 <canvas class="photo"></canvas>
+</div>
 <video class="player"></video>
 <div class="strip"></div>
 
@@ -42,3 +49,14 @@
 <script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
+<style>
+h1 {
+  font-family:'Righteous', cursive;
+  text-align: center;
+  font-size: 500%;
+  text-shadow: 2px 3px 0 black;
+  color: #4295f4;
+}
+</style>
+
+

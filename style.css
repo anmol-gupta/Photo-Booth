@@ -11,6 +11,10 @@ html {
   background:#4286f4;
 }
 
+button {
+  padding: 4px;
+}
+
 .photobooth {
   background:white;
   max-width:150rem;
@@ -26,8 +30,10 @@ html {
 }
 
 .photo {
-  width:100%;
-  float:left;
+  width:85%;
+  justify-content: center;
+  height:85%;
+  border: 2px 2px 2px 2px solid black;
 }
 
 .player {
@@ -35,6 +41,7 @@ html {
   top:20px;
   right: 20px;
   width:200px;
+  height: 200px;
 }
 
 /*
@@ -57,3 +64,5 @@ html {
 .strip a:nth-child(5n+3) img { transform: rotate(8deg); }
 .strip a:nth-child(5n+4) img { transform: rotate(-11deg); }
 .strip a:nth-child(5n+5) img { transform: rotate(12deg); }
+
+
