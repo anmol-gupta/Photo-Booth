@@ -79,12 +79,37 @@ function paintToCanvasRGBS() {
 	}, 16);
 }
 
+function paintToCanvasBE() {
+	const width = video.videoWidth;
+	const height = video.videoHeight;
+	console.log(width, height);
+	canvas.width = width;
+	canvas.height = height;
+
+	return setInterval(() => {
+		ctx.drawImage(video, 0, 0, width, height);
+		let pixels = ctx.getImageData(0, 0, width, height);
+		ctx.globalAlpha = 0.1;
+		pixels = blueEffect(pixels);
+		ctx.putImageData(pixels,0,0);
+	}, 16);
+}
+
 
 function redEffect(pixels) {
 	for(var i = 0; i < pixels.data.length; i += 4){
-		pixels.data[i + 0] += 50;
+		pixels.data[i + 0] += 18;
 		//pixels.data[i + 1] -= 50;
 		pixels.data[i + 2] *= 0.5;
+	}
+	return pixels;
+}
+
+function blueEffect(pixels) {
+	for(var i = 0; i < pixels.data.length; i += 4){
+		pixels.data[i + 0] *= 0.5;
+		//pixels.data[i + 1] -= 50;
+		pixels.data[i + 2] += 20;
 	}
 	return pixels;
 }

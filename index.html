@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
+    <div class="container">
     <h1>PhotoBooth</h1>
-	<div class="photobooth" >
-        <div class="col-md-offset-3">
-        <button onclick="takePhoto()" class="btn btn-primary">Take Photo</button>
+    <i>Refresh to clear out the filter</i>
+	<div class="photobooth">
+        <div>
+        <button onclick="takePhoto()" class="btn btn-danger">Take Photo</button>
         <button onclick="paintToCanvasRE()" name="RE" class="btn btn-primary" >RedEffect</button>
         <button onclick="paintToCanvasRGBS()" name="RGBS" class="btn btn-primary" >RGBSplit</button>
-        <button onclick="paintToCanvas()" name="RGBS" class="btn btn-primary">Default</button>
+        <button onclick="paintToCanvasBE()" name="Ocean" class="btn btn-primary" >Ocean</button>
+        <!-- <button onclick="paintToCanvas()" name="RGBS" class="btn btn-primary">Default</button> -->
         </div>
     <!--<div class="rgb">
 		<div class="controls">
@@ -40,11 +43,11 @@
  </div>
 </div>
 <div class="container frame">
-<canvas class="photo"></canvas>
+<canvas class="photo" style="border: 4px groove blue;"></canvas>
 </div>
 <video class="player"></video>
 <div class="strip"></div>
-
+</div>
 <audio class="shutter" src="http://wesbos.com/demos/photobooth/snap.mp3" hidden ></audio>
 <script type="text/javascript" src="scripts.js"></script>
 </body>
